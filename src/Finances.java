@@ -33,7 +33,29 @@ public class Finances extends App {
                     if (personOption >= 1 && personOption <= menbers.length) {
                         String chosenPerson = menbers[personOption - 1];
 
-                        System.out.println("Choose what you do :   \n  1: save money");
+                        System.out.println("Choose what you do :   \n  1: save money \n 2: check balance");
+
+                        int actionOption = scanner.nextInt();
+
+                        switch (actionOption) {
+                            case 1:
+                                System.out.println("enter amount to save :");
+
+                                int amount = scanner.nextInt();
+                                money += amount;
+
+                                System.out.println(chosenPerson + " saved " + amount + " total money : " + money);
+
+                                break;
+                            case 2:
+                                System.out.println(chosenPerson + " has balance : " + balance);
+
+                                break;
+                                
+                        
+                            default:
+                                break;
+                        }
                     }
 
                     break;
