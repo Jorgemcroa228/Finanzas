@@ -33,7 +33,7 @@ public class Finances extends App {
                     if (personOption >= 1 && personOption <= menbers.length) {
                         String chosenPerson = menbers[personOption - 1];
 
-                        System.out.println("Choose what you do :   \n  1: save money \n 2: check balance");
+                        System.out.println("Choose what you don:   \n 1: save money \n 2: check balance \n 3: sign out.");
 
                         int actionOption = scanner.nextInt();
 
@@ -46,14 +46,49 @@ public class Finances extends App {
 
                                 System.out.println(chosenPerson + " saved " + amount + " total money : " + money);
 
+                                System.out.println("1: check balance \n2: sign out.");
+
+                                int actionToBalance = scanner.nextInt();
+
+                                switch (actionToBalance) {
+                                    case 1:
+                                        System.out.println(chosenPerson + " has balance : " + balance);
+
+                                        System.out.println("1: to exit. \n2: any comman to return to the main manu.");
+
+                                        int actionExit = scanner.nextInt();
+
+                                        switch (actionExit) {
+                                            case 1:
+                                                System.out.println("You left the program.");
+                                                break Jorge;
+                                        
+                                            default:
+                                                
+                                                break;
+                                        }
+                                        break;
+                                    case 2:
+                                        System.out.println("You left the program.");
+                                    break Jorge;
+            
+                                    default:
+                                        System.out.println("Invalid action.");
+                                        break;
+                                }
+
                                 break;
                             case 2:
                                 System.out.println(chosenPerson + " has balance : " + balance);
 
                                 break;
-                                
+                            case 3:
+                                System.out.println("You left the program.");
+
+                                break Jorge;
                         
                             default:
+                                System.out.println("Invalid option.");
                                 break;
                         }
                     }
@@ -62,7 +97,7 @@ public class Finances extends App {
                     
                 case 2:
                     System.out.println("You left the program.");
-                    break;
+                    break Jorge;
 
                 default:
                     System.out.println("Invalid option."); 
