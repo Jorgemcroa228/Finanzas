@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Finances extends App {
 
     double balance;
@@ -12,6 +14,27 @@ public class Finances extends App {
 
     @Override
     public Double calculateFinances() {
+        int option;
+        Scanner scanner = new Scanner(System.in);
 
-    }
+        option = scanner.nextInt();
+
+        Jorge :while (true) {
+            System.out.println("Family finance system");
+            System.out.println("Choose what do you want to search :  \n  1: Person. \n  2: Sign out.");
+
+            switch (option) {
+                case "1":
+                    
+                    break;
+                    
+                case "2":
+                    System.out.println("You left the program.");
+                    break;
+
+                default:
+                    break;
+            }
+            
+        } 
 }
