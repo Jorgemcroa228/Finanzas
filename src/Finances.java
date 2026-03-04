@@ -3,12 +3,10 @@ import java.util.Scanner;
 public class Finances extends App {
 
     double balance;
-    String name;
     int money;
-
-    public Finances(double balance, String name, int money) {
+    String[] menbers = {"juan", "juliana", "sara"};
+    public Finances(double balance, int money) {
         this.balance = balance;
-        this.name = name;
         this.money = money;
     }
 
@@ -17,15 +15,27 @@ public class Finances extends App {
         int option;
         Scanner scanner = new Scanner(System.in);
 
-        option = scanner.nextInt();
 
         Jorge :while (true) {
             System.out.println("Family finance system");
             System.out.println("Choose what do you want to search :  \n  1: Person. \n  2: Sign out.");
+            option = scanner.nextInt();
 
             switch (option) {
                 case 1:
-                    
+                    System.out.println("choose the person : ");
+                    System.out.println(menbers[0] + " like 1");
+                    System.out.println(menbers[1] + " like 2");
+                    System.out.println(menbers[2] + " like 3");
+
+                    int personOption = scanner.nextInt();
+
+                    if (personOption >= 1 && personOption <= menbers.length) {
+                        String chosenPerson = menbers[personOption - 1];
+
+                        System.out.println("Choose what you do :   \n  1: save money");
+                    }
+
                     break;
                     
                 case 2:
@@ -37,6 +47,6 @@ public class Finances extends App {
                     break Jorge;
             }
             
-        } 
+        } return balance;
     }
 }
