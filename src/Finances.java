@@ -24,17 +24,19 @@ public class Finances extends App {
             System.out.println("Choose what do you want to search :  \n  1: Person. \n  2: Sign out.");
 
             switch (option) {
-                case "1":
+                case 1:
                     
                     break;
                     
-                case "2":
+                case 2:
                     System.out.println("You left the program.");
                     break;
 
                 default:
-                    break;
+                    System.out.println("Invalid option."); 
+                    break Jorge;
             }
             
         } 
+    }
 }
